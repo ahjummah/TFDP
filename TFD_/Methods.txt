@@ -1,0 +1,36 @@
+Streaming:
+
+- Data with media are not streamed.
+- English tweets are the only tweets being streamed.
+- There's a query for slang insults.
+
+Cleaning:
+
+- Abbreviations are changed.
+- Spellings are corrected.
+- Smileys are removed.
+- Unnecessary repetition of characters are normalized.
+
+Labeling:
+
+- The presence of user mention should be there.
+- The insult should be directed to the user being mentioned by the @user.
+- Libog sha unsaon pag label jd hahahaha
+
+Preprocessing:
+
+- Remove punctuations from tweets except the @usermentions
+- Remove stopwords
+
+Feature Extraction:
+
+- Get unigram and bigram vocabulary
+- Get LSA
+
+
+Possible Reasons why classifier's accuracy is low:
+- Every username is different so it might take a little time for the classifier to learn the significance of the "@"
+
+
+Recommendation: 
+- Have the dataset be focused only twitter mentions because mao rman gihapon na ang notifications imong madawat sa twitter. So dapat ground truth next time nga naa juy usermentions tanan ok?
