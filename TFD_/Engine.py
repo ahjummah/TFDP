@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[10]:
+# In[1]:
 
 
 import pickle
@@ -13,7 +13,7 @@ from sklearn.preprocessing import LabelEncoder
 import numpy as np
 
 
-# In[11]:
+# In[2]:
 
 
 with open('Models/classifier.pkl', 'rb') as f:
@@ -27,11 +27,11 @@ with open('Models/lsa.pkl', 'rb') as h:
         
 
 
-# In[12]:
+# In[3]:
 
 
-# a = raw_input("Enter:\n")
-a = "@ice you are so fucking stupid dude!"
+a = raw_input("Enter:\n")
+# a = "@ice you are so fucking stupid dude!"
 a = remove_punctuations.removePunctuations(a)
 a = remove_stopwords.remove_words(a)
 print a
@@ -46,23 +46,23 @@ _input = raw_input("Do you feel like you are being bashed?[0/1]:\n")
 label.append(_input)
 
 
+# In[4]:
+
+
+# b = "you are just beautiful"
+# b = remove_punctuations.removePunctuations(b)
+# b = remove_stopwords.remove_words(b)
+
+# X1 = vectorizer.transform([b])
+# tfidf = X1.toarray()
+# lsa_ = lsa.transform(X1)
+# final_representation = np.concatenate((tfidf,lsa_),axis=1)
+# print "output",clf.predict(final_representation)
+# _input = raw_input("Do you feel like you are being bashed?[0/1]:\n")
+# label.append(_input)
+
+
 # In[5]:
-
-
-b = "you are just beautiful"
-b = remove_punctuations.removePunctuations(b)
-b = remove_stopwords.remove_words(b)
-
-X1 = vectorizer.transform([b])
-tfidf = X1.toarray()
-lsa_ = lsa.transform(X1)
-final_representation = np.concatenate((tfidf,lsa_),axis=1)
-print "output",clf.predict(final_representation)
-_input = raw_input("Do you feel like you are being bashed?[0/1]:\n")
-label.append(_input)
-
-
-# In[13]:
 
 
 new_feed = []
@@ -81,7 +81,7 @@ print X_new.shape
 print y_new.shape
 
 
-# In[14]:
+# In[6]:
 
 
 X2 = vectorizer.transform(X_new)
@@ -90,7 +90,7 @@ lsa_ = lsa.transform(X2)
 final_representation = np.concatenate((tfidf,lsa_),axis=1)
 
 
-# In[15]:
+# In[7]:
 
 
 # class_weights = compute_class_weight('balanced', [0, 1], y_new)
@@ -98,7 +98,7 @@ final_representation = np.concatenate((tfidf,lsa_),axis=1)
 clf.partial_fit(final_representation,y_encoded)
 
 
-# In[16]:
+# In[8]:
 
 
 # save to pickle

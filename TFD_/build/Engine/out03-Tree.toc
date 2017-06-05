@@ -1,0 +1,5 @@
+('C:\\Users\\Admin\\Desktop\\Thesis-Final-3\\TFD_\\build\\Engine\\scandir-1.5-py2.7-win32.egg',
+ None,
+ set(['*.py', '*.pyc', '*.pyd', '*.pyo', '*.so', 'EGG-INFO']),
+ 'DATA',
+ [])
