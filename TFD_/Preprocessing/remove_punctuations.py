@@ -27,6 +27,7 @@ if __name__ == "__main__":
 
         for row in reader:
             tweets.append(row)
+            
         writer.writeheader()
 
         for t in tweets:
