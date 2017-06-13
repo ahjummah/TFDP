@@ -23,8 +23,6 @@ def remove_words(tweet):
 
 if __name__ == "__main__":
     tweets = []
-    # with open('tweets-removed-punctuations-test.csv','r') as r, open('../Training_ Dataset/2500_training_data.csv','a') as w:
-    # with open('TEST_2.csv','r') as r, open('TEST_out.csv','a') as w:
     with open("../Evaluating_Dataset/dataset_1_no_punc.csv",'r') as r, open("../Evaluating_Dataset/dataset_1_no_stop.csv", 'a') as w:
 
         reader = csv.DictReader(r)
